@@ -1,0 +1,12 @@
+<div class="side-nav-content">
+  <div class="sidebar-head">
+  </div>
+  <ul class="nav-list">
+  <li class="nav-list-item" routerLinkActive="active" [routerLink]="item.link" *ngFor="let item of list" [ngClass]="{'selected':selectedClass===item.link}" (click)="onClassSelected(item.link)">
+    <i class="{{item.icon}}"></i>
+    <span>
+      <a>{{item.name}}</a>
+    </span>
+  </li>
+  </ul>
+</div>

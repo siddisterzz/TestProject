@@ -1,0 +1,28 @@
+.header{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.template-heading{
+  width: 100%;
+  font-size: 25px;
+}
+.component-bar{
+  width: 100%;
+  border-bottom: 1px solid #efeef2;
+  margin-top: 20px;
+  padding-top:10px ;
+  padding-bottom:10px ;
+}
+.component-class{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+  margin-right: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.component-class.selected{
+  border-bottom: 2px solid #969bc1;
+}

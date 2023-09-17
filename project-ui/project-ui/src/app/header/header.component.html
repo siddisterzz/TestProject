@@ -1,0 +1,7 @@
+<div class="header">
+<div class = "template-heading">Templates</div>
+<div class="component-bar">
+  <span  routerLinkActive="active" [routerLink]="'templates'" class="component-class" (click)="onSelectedClass(1)" [ngClass]='{"selected":selectedClass===1}'>My Template</span>
+  <span routerLinkActive="active" [routerLink]="'archived'"  class="component-class" (click)="onSelectedClass(2)" [ngClass]='{"selected":selectedClass===2}'>Archive</span>
+</div>
+</div>

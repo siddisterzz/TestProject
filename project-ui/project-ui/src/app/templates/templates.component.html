@@ -1,0 +1,57 @@
+<div class="template">
+  <div class="template-head">
+  <div class="search-container">
+    <span class="search-icon">
+      <i class="fas fa-search"></i>
+    </span>
+    <input
+      type="text"
+      class="search-bar"
+      placeholder="Search by categories or subcategories"
+      [(ngModel)]="searchText"
+      (input)="filterItems()"
+    />
+  </div>
+  <div class="sort-dropdown">
+    <div id = "dropdown"(click)="onDropdownToggle()">
+      <span >{{selectedOption}}</span>
+      <i class="fa-solid fa-angle-down angle-down"></i>
+      <ul class="dropdown-menu" [ngClass]="{'dropdown-menu-active':statusDropdown}">
+        <li *ngFor="let item of sortOptionList" (click)="onOptionClick(item)">{{item}}</li>
+      </ul>
+    </div>
+    <div class="archive-div">
+      <i class="fa-solid fa-inbox"></i>
+      Select and Archive
+    </div>
+  </div>
+</div>
+  <div class="main-div">
+    <div class="category">
+      <div class="category-div">
+        <span class="category-span">Categories</span>
+        <span class="create-span">
+          <i class="fas fa-plus"></i>
+          Create
+        </span>
+      </div>
+      <ul class = "category-list">
+        <li *ngFor="let item of displayItemList" class="list" [ngClass]="{'selected':selectedCategory===item.name}"(click)="onCategoryClicked(item.id)">{{item.name}}</li>
+      </ul>
+    </div>
+    <div class="subcategory">
+      <div class="category-div">
+        <span class="category-span">Subcategories</span>
+        <span class="create-span">
+          <i class="fas fa-plus"></i>
+          Create
+        </span>
+      </div>
+      <div class="subcategory-list">
+        <ul class = "category-list">
+          <li class="list"*ngFor="let item of displayCategoryList">{{item.name}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

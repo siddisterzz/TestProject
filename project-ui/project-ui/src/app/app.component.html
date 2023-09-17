@@ -1,0 +1,9 @@
+<div class="container-fluid g-0">
+  <app-header></app-header>
+    <app-sidebar></app-sidebar>
+    <main>
+    <div class="display-area" [ngClass]="{'display-area-shrink':sideNavStatus}">
+       <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
